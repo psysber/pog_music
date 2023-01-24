@@ -47,20 +47,45 @@ class HomePage extends GetView<HomeController> {
   // 导航
   Widget _getNavigation() {
     List<_NavigationItem> items = [
-      _NavigationItem(icon: Icons.av_timer, text: 'suggest_nav'.tr),
-      _NavigationItem(icon: Icons.featured_play_list, text: 'playlists'.tr),
-      _NavigationItem(icon: Icons.bar_chart, text: 'ranking'.tr),
-      _NavigationItem(icon: Icons.cast, text: 'radio'.tr),
-      _NavigationItem(icon: Icons.cast, text: 'radio'.tr),
-      _NavigationItem(icon: Icons.cast, text: 'radio'.tr),
-      _NavigationItem(icon: Icons.cast, text: 'radio'.tr),
+      _NavigationItem(
+        icon: Icons.av_timer,
+        text: 'suggest_nav'.tr,
+        onTap: "/play-list?title=${'suggest_nav'.tr}",
+      ),
+      _NavigationItem(
+        icon: Icons.featured_play_list,
+        text: 'playlists'.tr,
+        onTap: "/play-list?title=${'playlists'.tr}",
+      ),
+      _NavigationItem(
+        icon: Icons.bar_chart,
+        text: 'ranking'.tr,
+        onTap: "/play-list?title=${'ranking'.tr}",
+      ),
+      _NavigationItem(
+        icon: Icons.cast,
+        text: 'radio'.tr,
+        onTap: "/play-list?title=${'radio'.tr}",
+      ),
+      _NavigationItem(
+        icon: Icons.cast,
+        text: 'radio'.tr,
+        onTap: "/play-list?title=${'radio'.tr}",
+      ),
+      _NavigationItem(
+        icon: Icons.cast,
+        text: 'radio'.tr,
+        onTap: "/play-list?title=${'radio'.tr}",
+      ),
+      _NavigationItem(
+        icon: Icons.cast,
+        text: 'radio'.tr,
+        onTap: "/play-list?title=${'radio'.tr}",
+      ),
     ];
 
     final list = items
-        .map(
-          (e) => Padding(
-            padding: EdgeInsets.fromLTRB(8, 10, 18, 10),
-            child: InkWell(
+        .map((e) => InkWell(
               onTap: () => Get.toNamed(e.onTap!),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -83,16 +108,19 @@ class HomePage extends GetView<HomeController> {
                   )
                 ],
               ),
-            ),
-          ),
-        )
+            ))
         .toList();
 
     return Container(
       child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          child: Row(
-            children: list,
+          child: Padding(
+            padding: EdgeInsets.only(left: 8.sp),
+            child: Wrap(
+              runAlignment: WrapAlignment.center,
+              spacing: 20.0, // 主轴(水平)方向间距
+              children: list,
+            ),
           )),
     );
   }

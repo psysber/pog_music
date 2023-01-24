@@ -1,12 +1,9 @@
-import 'dart:ffi';
-
 import 'package:audio_service/audio_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/src/routes/default_transitions.dart';
 import 'package:pog_music/app/components/skeleton.dart';
 import 'package:pog_music/app/modules/home/home_controller.dart';
 import 'package:pog_music/app/modules/home/model/discovery_model.dart';
@@ -91,15 +88,15 @@ class DiscoveryView extends GetView<DiscoveryController> {
               if (length == 0) {
                 audioManage?.addPlaylists(list
                     .map((e) => MediaItem(
-                          id: "${e.id}",
-                          title: "${e.name}",
-                          album: e.album,
-                          extras: {
-                            'url': "${RequestApi.song_url}${e.id}",
-                            "singer": "${e.singer}",
-                            "image": '${e.imgUrl}'
-                          },
-                        ))
+                        id: "${e.id}",
+                        title: "${e.name}",
+                        album: e.album,
+                        extras: {
+                          'url': "${RequestApi.song_url}${e.id}",
+                          "singer": "${e.singer}",
+                          "image": '${e.imgUrl}'
+                        },
+                        artUri: Uri.tryParse("${e.imgUrl}")))
                     .toList());
               }
 

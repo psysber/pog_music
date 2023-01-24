@@ -8,6 +8,8 @@ import '../modules/login/login_view.dart';
 import '../modules/my/bindings/my_binding.dart';
 import '../modules/my/views/my_view.dart';
 import '../modules/notfound/notfound_view.dart';
+import '../modules/playList/bindings/play_list_binding.dart';
+import '../modules/playList/views/play_list_view.dart';
 import '../modules/player/bindings/player_binding.dart';
 import '../modules/player/views/player_view.dart';
 import '../modules/proxy/proxy_view.dart';
@@ -50,6 +52,11 @@ class AppPages {
       name: _Paths.MY,
       page: () => const MyView(),
       binding: MyBinding(),
+    ),
+    GetPage(
+      name: _Paths.PLAY_LIST,
+      page: () => const PlayListView(),
+      binding: PlayListBinding(),
     ),
   ];
 

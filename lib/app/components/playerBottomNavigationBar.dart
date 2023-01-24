@@ -168,7 +168,6 @@ class PlayerBottomNavigationBar
     final size = 35.sp;
     print("image ${url}");
     if (url == 'null') {
-
       return Image.asset(
         "assets/images/record.png",
         fit: cover,
@@ -242,12 +241,12 @@ class playListBottomSheet extends StatelessWidget {
                           ),
                           Text(
                             ' 收藏全部  |  ',
-                            style: TextStyle(fontSize: 12),
+                            style: TextStyle(fontSize: 14.sp),
                           ),
                           InkWell(
                             child: Icon(
                               Icons.delete_outline,
-                              size: fs,
+                              size: 14.sp,
                             ),
                             onTap: () {
                               audio?.clearPlayLists();
@@ -274,14 +273,14 @@ class playListBottomSheet extends StatelessWidget {
                             children: [
                               Icon(
                                 Icons.volume_down_alt,
-                                size: 12.sp,
+                                size: 14.sp,
                                 color: Colors.deepPurpleAccent,
                               ),
                               Text.rich(
                                 TextSpan(children: [
                                   TextSpan(
                                       text: '${playlistTitles[index].title} ',
-                                      style: TextStyle(fontSize: 11.sp)),
+                                      style: TextStyle(fontSize: fs)),
                                   TextSpan(
                                       text:
                                           ' -  ${playlistTitles[index].album}',
@@ -371,7 +370,7 @@ class playListBottomSheet extends StatelessWidget {
               ),
               Text(
                 ' 列表循环(${length})',
-                style: TextStyle(fontSize: 12),
+                style: TextStyle(fontSize: 14.sp),
               )
             ],
           );

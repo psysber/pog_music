@@ -11,6 +11,7 @@ class MyView extends GetView<MyController> {
 
   @override
   Widget build(BuildContext context) {
+    var fontsize = TextStyle(fontSize: 14.sp);
     return Container(
       color: Colors.white,
       child: ListView(
@@ -55,22 +56,34 @@ class MyView extends GetView<MyController> {
           ),
           ListTile(
             leading: Icon(Icons.star_border),
-            title: Text("我的收藏"),
+            title: Text(
+              "我的收藏",
+              style: TextStyle(fontSize: 14.sp),
+            ),
             trailing: Icon(Icons.chevron_right),
           ),
           ListTile(
             leading: Icon(Icons.queue_music),
-            title: Text("最近播放"),
+            title: Text(
+              "最近播放",
+              style: TextStyle(fontSize: 14.sp),
+            ),
             trailing: Icon(Icons.chevron_right),
           ),
           ListTile(
             leading: Icon(Icons.download),
-            title: Text("我的下载"),
+            title: Text(
+              "我的下载",
+              style: TextStyle(fontSize: 14.sp),
+            ),
             trailing: Icon(Icons.chevron_right),
           ),
           ListTile(
             leading: Icon(Icons.music_video),
-            title: Text("本地音乐"),
+            title: Text(
+              "本地音乐",
+              style: TextStyle(fontSize: 14.sp),
+            ),
             trailing: Icon(Icons.chevron_right),
           ),
           Divider(),
@@ -87,7 +100,13 @@ class MyView extends GetView<MyController> {
             ),
             title: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Text('我喜欢的音乐'), Text("30首")],
+              children: [
+                Text(
+                  '我喜欢的音乐',
+                  style: fontsize,
+                ),
+                Text("30首")
+              ],
             ),
             trailing: Icon(Icons.chevron_right),
           ),
@@ -100,7 +119,13 @@ class MyView extends GetView<MyController> {
             ),
             title: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Text('古典音乐'), Text("30首")],
+              children: [
+                Text(
+                  '古典音乐',
+                  style: fontsize,
+                ),
+                Text("30首")
+              ],
             ),
             trailing: Icon(Icons.chevron_right),
           ),
@@ -113,7 +138,13 @@ class MyView extends GetView<MyController> {
             ),
             title: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Text('流行音乐'), Text("30首")],
+              children: [
+                Text(
+                  '流行音乐',
+                  style: fontsize,
+                ),
+                Text("30首")
+              ],
             ),
             trailing: Icon(Icons.chevron_right),
           ),
@@ -126,7 +157,13 @@ class MyView extends GetView<MyController> {
             ),
             title: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Text('金属音乐'), Text("30首")],
+              children: [
+                Text(
+                  '金属音乐',
+                  style: fontsize,
+                ),
+                Text("30首")
+              ],
             ),
             trailing: Icon(Icons.chevron_right),
           ),
@@ -139,7 +176,13 @@ class MyView extends GetView<MyController> {
             ),
             title: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [Text('轻音乐'), Text("30首")],
+              children: [
+                Text(
+                  '轻音乐',
+                  style: fontsize,
+                ),
+                Text("30首")
+              ],
             ),
             trailing: Icon(Icons.chevron_right),
           ),

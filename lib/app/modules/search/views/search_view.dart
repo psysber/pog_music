@@ -148,52 +148,57 @@ class SearchView extends GetView<SearchController> {
                               Expanded(
                                   child: ListView.builder(
                                 itemCount: 100,
-                                itemExtent: 50.sp,
+                                itemExtent: 70.sp,
                                 //列表项构造器
                                 itemBuilder: (BuildContext context, int index) {
-                                  return ListTile(
-                                    title: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        LightText(
-                                          text: "The Everlasting Guilty Crown",
-                                          lightText: controller.searchText,
-                                          textStyle:
-                                              TextStyle(color: Colors.black),
-                                          lightStyle: TextStyle(
-                                              color: Colors.deepPurpleAccent),
-                                        ),
-                                        LightText(
-                                          text:
-                                              "EGOIST - The Everlasting Guilty Crown",
-                                          lightText: "e",
-                                          textStyle: TextStyle(
-                                              fontSize: 12.sp,
-                                              color: Colors.grey[600]),
-                                          lightStyle: TextStyle(
-                                              fontSize: 12.sp,
-                                              color: Colors.deepPurpleAccent),
-                                        ),
-                                        LightText(
-                                          text: "TV动画<<罪恶王冠>> OP2",
-                                          lightText: controller.searchText,
-                                          textStyle: TextStyle(
-                                              fontSize: 12.sp,
-                                              color: Colors.grey[600]),
-                                          lightStyle: TextStyle(
-                                              fontSize: 12.sp,
-                                              color: Colors.deepPurpleAccent),
-                                        )
-                                      ],
-                                    ),
-                                    trailing: IconButton(
-                                      icon: Icon(
-                                        Icons.more_vert,
-                                        color: Colors.grey[600],
-                                        size: 16.sp,
+                                  return Container(
+                                    padding: EdgeInsets.only(
+                                        top: 8.sp, bottom: 8.sp),
+                                    child: ListTile(
+                                      title: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          LightText(
+                                            text:
+                                                "The Everlasting Guilty Crown",
+                                            lightText: controller.searchText,
+                                            textStyle:
+                                                TextStyle(color: Colors.black),
+                                            lightStyle: TextStyle(
+                                                color: Colors.deepPurpleAccent),
+                                          ),
+                                          LightText(
+                                            text:
+                                                "EGOIST - The Everlasting Guilty Crown",
+                                            lightText: "e",
+                                            textStyle: TextStyle(
+                                                fontSize: 12.sp,
+                                                color: Colors.grey[600]),
+                                            lightStyle: TextStyle(
+                                                fontSize: 12.sp,
+                                                color: Colors.deepPurpleAccent),
+                                          ),
+                                          LightText(
+                                            text: "TV动画<<罪恶王冠>> OP2",
+                                            lightText: controller.searchText,
+                                            textStyle: TextStyle(
+                                                fontSize: 12.sp,
+                                                color: Colors.grey[600]),
+                                            lightStyle: TextStyle(
+                                                fontSize: 12.sp,
+                                                color: Colors.deepPurpleAccent),
+                                          )
+                                        ],
                                       ),
-                                      onPressed: () {},
+                                      trailing: IconButton(
+                                        icon: Icon(
+                                          Icons.more_vert,
+                                          color: Colors.grey[600],
+                                          size: 16.sp,
+                                        ),
+                                        onPressed: () {},
+                                      ),
                                     ),
                                   );
                                 },
